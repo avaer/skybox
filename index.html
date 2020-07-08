@@ -2,98 +2,13 @@
 <html>
 
 <head>
-  <title>xrpackage | trees</title>
-  <link rel=icon type="image/png" href="favicon.png">
-  <link href="index.css" rel=stylesheet>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/0735724151.js" crossorigin="anonymous"></script>
+  <title>skybox</title>
 </head>
 
-<body class="header-gap">
-  <header class=header id=header>
-    <a href="/" class="nav icon">山</a>
-    <nav class="selector nav bar" id=selector>
-      <i class="fa fa-solar-system head"></i>
-      <div class=header-label id=header-label>Terrain</div>
-      <i class="fa fa-chevron-down tail"></i>
-      <div class=selections id=selections>
-        <a href="run.html" class=selection id=run-mode>
-          <i class="fa fa-play"></i>
-          <div class=wrap>
-            <h3>Run mode</h3>
-            <p>Switch to run mode</p>
-          </div>
-        </a>
-        <a href="edit.html" class=selection id=edit-mode>
-          <i class="fa fa-pencil"></i>
-          <div class=wrap>
-            <h3>Edit mode</h3>
-            <p>You are currently editing this world</p>
-          </div>
-        </a>
-        <a href="browse.html" class="selection dim">
-          <i class="fa fa-solar-system"></i>
-          <div class=wrap>
-            <h3>Browse packages</h3>
-            <p>Explore the XRPackage registry</p>
-          </div>
-        </a>
-        <a href="help.html" class=selection>
-          <i class="fa fa-book"></i>
-          <div class=wrap>
-            <h3>Documentation</h3>
-            <p>Learn how to make packages and worlds</p>
-          </div>
-        </a>
-      </div>
-    </nav>
-  </header>
-
+<body>
 <script type=module>
 import * as THREE from './three.module.js';
-import alea from './alea.js';
 import {OrbitControls} from './OrbitControls.js';
-import {GLTFLoader} from './GLTFLoader.js';
-import {BufferGeometryUtils} from './BufferGeometryUtils.js';
-
-/* const CHUNK_HEADER_SIZE = 2 * 4;
-const NUM_SLOTS = 64 * 64;
-const OBJECT_SLOT_FIELDS = 1 + 10 + 1;
-const OBJECT_SLOT_SIZE = OBJECT_SLOT_FIELDS * 4;
-const VEGETATION_SLOT_FIELDS = 1 + 10;
-const VEGETATION_SLOT_SIZE = VEGETATION_SLOT_FIELDS * 4;
-const TERRAIN_BUFFER_SIZE = 512 * 1024;
-const OBJECT_BUFFER_SIZE = NUM_SLOTS * OBJECT_SLOT_SIZE;
-const VEGETATION_BUFFER_SIZE = NUM_SLOTS * VEGETATION_SLOT_SIZE;
-const BLOCK_BUFFER_SIZE = 16 * 128 * 16 * 4;
-const LIGHT_SLOT_FIELDS = 4;
-const LIGHT_SLOT_SIZE = LIGHT_SLOT_FIELDS * 4;
-const LIGHT_BUFFER_SIZE = NUM_SLOTS * LIGHT_SLOT_SIZE;
-const TRAILER_SLOTS = 32;
-const CHUNK_TRAILER_SIZE = TRAILER_SLOTS * 4;
-const CHUNK_SIZE = CHUNK_HEADER_SIZE + TERRAIN_BUFFER_SIZE + OBJECT_BUFFER_SIZE + VEGETATION_BUFFER_SIZE + BLOCK_BUFFER_SIZE + LIGHT_BUFFER_SIZE + CHUNK_TRAILER_SIZE;
-import {
-  NUM_CELLS,
-  NUM_CELLS_OVERSCAN,
-  NUM_CELLS_HEIGHT,
-
-  NUM_CHUNKS_HEIGHT,
-
-  NUM_RENDER_GROUPS,
-
-  GEOMETRY_BUFFER_SIZE,
-
-  TEXTURE_SIZE,
-
-  DEFAULT_SEED,
-
-  NUM_POSITIONS_CHUNK,
-
-  PEEK_FACES,
-  PEEK_FACE_INDICES,
-} from './constants.js'; */
-// import murmur from './murmur.js';
-// import indev from './indev.js';
 
 (async () => {
 
