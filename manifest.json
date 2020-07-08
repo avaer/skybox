@@ -1,6 +1,7 @@
 {
-  "name": "Terrain",
-  "description": "Describe your WebXR application",
+  "name": "pink-skybox",
+  "description": "WebXR Pink Skybox",
   "xr_type": "webxr-site@0.0.1",
-  "start_url": "index.html"
+  "start_url": "index.html",
+  "repository": "git@github.com:avaer/skybox.git"
 }
